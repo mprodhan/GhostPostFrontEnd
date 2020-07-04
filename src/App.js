@@ -40,11 +40,13 @@ handleBoast = (allPosts) => {
     boast => boast.is_boast === true
   )})
 };
+
 handleRoast = (allPosts) => {
   this.setState({ghostpost: allPosts.filter(
     boast => boast.is_boast === false
   )})
 };
+
 handleMost = (allPosts) => {
   this.setState({ghostpost: allPosts.sort(
     (post1, post2) => post2.total_votes - post1.total_votes
